@@ -1,6 +1,6 @@
 import os
 import streamlit as st
-from google import genai #gemini AIのため
+import google.generativeai as genai
 
 
 # APIキーの設定
