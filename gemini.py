@@ -1,12 +1,10 @@
 import os
-from dotenv import load_dotenv #.envファイルの読み込み用
+import streamlit as st
 from google import genai #gemini AIのため
 
-# .env　ファイルを読み込む
-load_dotenv()
 
 # APIキーの設定
-api_key = os.getenv("API_KEY")
+api_key = st.secrets["API_KEY"]
 
 def execute(prompt, gemini_model='gemini-2.0-flash'):
     client = genai.Client(api_key=api_key)
